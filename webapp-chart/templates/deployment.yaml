@@ -47,8 +47,8 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          command: ["python"]
-          args: ["server.py"]
+          # command: ["python"]
+          # args: ["server.py"]
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
