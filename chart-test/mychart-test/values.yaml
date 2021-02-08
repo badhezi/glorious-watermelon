@@ -1,22 +1,14 @@
-# Default values for mychart.
+# Default values for mychart-test.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
-env:
-  - name: ABUSEIPDB_KEY
-    valueFrom:
-      secretKeyRef:
-        name: api-key
-        key: key
-  - name: PORT
-    value: 8080
 image:
-  repository: 813548235931.dkr.ecr.us-east-1.amazonaws.com/webserver
+  repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""

@@ -35,4 +35,4 @@ async def get_ip_reputation(ipaddr):
 
 app = web.Application()
 app.add_routes(routes)
-web.run_app(app, port=8081)
+web.run_app(app, port=env.get("PORT", 8080))
